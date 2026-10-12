@@ -5,6 +5,7 @@ import products from './src/data/products';
 export default function App() {
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>Hello World</Text>
       <FlatList data={products} renderItem={({ item }) =>
       (<View style={styles.itemContainer}>
         <Image source={{ uri: item.image }} style={styles.image} />
@@ -24,8 +25,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginVertical: 50,
   },
   image: {
     width: '100%',
